@@ -4,20 +4,21 @@ with rustPlatform;
 
 buildRustPackage rec {
   name = "ethabi-${version}";
-  version = "0.2.0-unstable-2016-08-17";
+  version = "0.2.1";
 
   src = fetchFromGitHub {
     owner = "ethcore";
     repo = "ethabi";
-    rev = "2b6e8e4173ed9fdfd4c8028fccc8130b9eb5491d";
-    sha256 = "1nhgggs4m41bsws9q2174jlv0q4f5nwm0ia24sh8rmagpvp3dsqi";
+    rev = "fbed04984cab0db8767e01054ee16271b8e36281";
+    sha256 = "1zgyyg1i5wmz8l1405yg5jmq4ddq530sl7018pkkc7l6cjj3bbhd";
   };
 
-  depsSha256 = "16r2p0zsypr3q814jalpmmlw4fh6d8ychjm74z5dfb1yvs1y2xzc";
+  depsSha256 = "0srxv0wbhvyflc967lkpd2mx5nk7asx2cbxa0qxvas16wy6vxz52";
 
   meta = {
     description = "Ethereum function call encoding (ABI) utility";
     homepage = https://github.com/ethcore/ethabi/;
+    maintainers = [stdenv.lib.maintainers.dbrock];
     inherit version;
   };
 }
